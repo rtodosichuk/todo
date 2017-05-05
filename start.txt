@@ -1,0 +1,2 @@
+To start the server run the following command at the command prompt
+    > node server
