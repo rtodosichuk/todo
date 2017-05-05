@@ -1,2 +1,6 @@
-To start the server run the following command at the command prompt
+To install the npm packages run the following command at the command prompt.
+    > npm install
+Also install body-parser
+    > npm install body-parser
+To start the server run the following 
     > node server
