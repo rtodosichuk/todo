@@ -1,0 +1,26 @@
+<div class="row" ng-controller="todoController">
+    <div class="col-md-6">
+        <div class="row">
+            <div>
+                <h2>{{title}}</h2>
+                <form>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <input type="text" class="form-control" required ng-model="formTodo" ng-model-intant />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button" ng-click="addTask()"><i class="icon-plus"></i> Add</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <task-list />
+            </div>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
+        <task-edit edittask="edittask" save="saveTask()" cancel="cancelTask()" />
+    </div>
+</div>

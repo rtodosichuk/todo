@@ -1,0 +1,48 @@
+<div class="row">
+    <form id="todoEditForm" class="form-horizontal" ng-show="edittask.id">
+
+    <!-- Form Name -->
+    <h2>Edit Task</h2>
+
+    <!-- Text input-->
+    <div class="form-group">
+        <label class="control-label" for="textinput">Task</label>
+        <div class="">
+            <input id="textinput" name="textinput" type="text" ng-model="edittask.name" ng-required="edittask.name" placeholder="Task name" class="form-control input-md">
+        </div>
+    </div>
+
+    <!-- Appended Input-->
+    <div class="form-group">
+        <label class="control-label" for="appendedtext">Due Date</label>
+        <div class="">
+            <div class="input-group date" id="duedate">
+                <input id="duedatetext" name="duedatetext" ng-model="edittask.due" date-picker class="form-control datepicker" placeholder="01/01/2020"
+                    type="text">
+                <span id="duedatespan" class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Multiple Checkboxes -->
+    <div class="form-group">
+        <div class="">
+            <div class="checkbox">
+                <label for="checkboxes-0">
+                    <input type="checkbox" name="checkboxes" ng-model="edittask.done" id="checkboxes-0" value="done">Done</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button (Double) -->
+    <div class="form-group">
+        <div class="col-md-8">
+            <button id="btnSave" name="btnSave" class="btn btn-primary" ng-click="save()">Save</button>
+            <button id="btnCancel" name="btnCanel" class="btn btn-default" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+
+    </form>
+</div>
